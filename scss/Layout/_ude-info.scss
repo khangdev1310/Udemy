@@ -1,0 +1,58 @@
+.ude-info{
+    margin-top: $mg-2;
+    background-color: $color-white-cream;
+    .ude-info-list{
+        flex-wrap: nowrap;
+        padding: $pd-2 0;
+        .ude-info-item{
+            display: flex;
+            padding: $pd-2 + 5;
+            margin-right: $mg-2;
+            background-color: $color-white-0;
+            .ude-info-img{
+                margin-right: $mg-1;
+            }
+            .ude-info-content{
+                h2{
+                    @include styleText($color-black-0,$fs-2,$fw-bold-1,$line-height-0);
+                }
+                p{
+                    @include styleText($color-gray-4,$fs-0,$fw-normal,$line-height-0);
+                    margin-bottom: 0;                }
+            }
+        }
+    }
+    #carouselExampleIndicators{
+        .carousel-indicators{
+            li{
+                background-color: $color-black-0;
+            }
+        }
+        .carousel-inner{
+            .ude-info-list-carousel{
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@include responsive("large"){
+    .ude-info{
+        .container{
+            .ude-info-list{
+                .ude-info-item{
+                    display: block;
+                    .ude-info-img{
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .ude-info-content{
+                        text-align: center;
+                    }
+                }
+            } 
+        }
+    }
+}
+

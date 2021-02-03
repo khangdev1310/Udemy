@@ -1,0 +1,78 @@
+footer{
+    background-color: $color-white-0;
+    hr{
+        margin: 0;
+    }
+    .container-fluid{
+        .row{
+            ul{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 110px;
+                li{
+                    flex: 25%;
+                    flex-grow: 0;
+                    list-style: none;
+                    a{
+                        @include styleText($color-blue,$fs-1,$fw-normal,$line-height-0);
+                        text-decoration: none;
+                        &:hover{
+                            color: $color-black-0;
+                        }
+                    }
+                    .footer__link-bold{
+                        @include styleText($color-blue,$fs-1,$fw-bold-1,$line-height-0);
+                    }
+                }
+            }
+        }
+    }
+    .footer__main{
+        max-width: 1440px;
+        margin: 40px auto 30px;
+    }
+    .dropdown{
+        button{
+            background-color: $color-white-0;
+            color: $color-black-0;
+        }
+    }
+    .footer__bottom{
+        max-width: 1440px;
+        margin: 30px auto;
+        .footer__end{
+            .footer__end-col{
+                display: flex;
+                align-items: center;
+                a{
+                    img{
+                        width: 110px;
+                    }
+                }
+                span{
+                    padding-top: 4px;
+                    @include styleText($color-gray-4,$fs-1,$fw-normal,$line-height-0);
+                }
+            }
+            .footer__end-link{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    li{
+                        display: inline;
+                        a{
+                            @include styleText($color-blue,$fs-1,$fw-normal,$line-height-0);
+                            text-decoration: none;
+                            &:hover{
+                                color: $color-black-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

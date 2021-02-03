@@ -1,0 +1,44 @@
+.ude-partners{
+    background-color: $color-gray-5;
+    padding: $pd-2;
+    .container{
+        .ude-partners__text{
+            text-align: center;
+            @include styleText($color-gray-4,$fs-1,$fw-normal,$line-height-0);
+            padding-top: $pd-1 + 6;
+            margin-bottom: $mg-1;
+        }
+        .ude-partners__logo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: $pd-2;
+        }
+    }
+}
+
+@include responsive("medium"){
+    .ude-partners{
+        .container{
+            .ude-partners__logo{
+                display: inline-flex !important;
+                flex-wrap: wrap !important;
+                justify-content: space-between !important;   
+                width: 100%;
+                padding-top: 32px;
+            }
+        }
+    }
+}
+
+@include responsive("small"){
+    .ude-partners{
+        .container{
+            .ude-partners__logo{
+                display: inline-flex !important;
+                flex-wrap: wrap !important;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.ude-carousel{
+    background-image: url(../img/cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    .carousel__content{
+        position: absolute;
+        top: 30%;
+        left: 54px;
+        .carousel__content-header{
+            @include styleText($color-white-0,$fs-4,$fw-bold-1,$line-height-0);
+        }
+        .carousel__content-text{
+            @include styleText($color-white-0,$fs-0+3,$fw-normal,$line-height-0);
+        }
+        .carousel__content-button{
+            input{
+                border-radius: 0;
+                border: none;
+                background-color: $color-white-0;
+                padding: $pd-1;
+                &:focus{
+                    box-shadow: none;
+                    border: none;
+                }
+            }
+            .input-group-text{
+                color: $color-red-0;
+                background-color: $color-white-0;
+                padding: $pd-1;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                &:hover{
+                    color: $color-white-0;
+                    background-color: $color-red-0;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .how-udemy-works{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(-45deg,$color-red-0 0%,$color-purple 100%);
+        width: 100%;
+        .how-udemy-work-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 96%;
+            margin: 0 auto;
+        }
+        .how-udemy-work{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: $pd-2 $pd-2 + 5;
+            span{
+                margin-right: $mg-1;
+                @include styleText($color-white-0,$fs-4,$fw-normal,$line-height-0);
+            }
+            .how-udemy-work__content{
+                h3{
+                    margin: 0;
+                    @include styleText($color-white-0,$fs-0 + 2,$fw-bold-1,$line-height-0);
+                }
+                p{
+                    margin: 0;
+                    @include styleText($color-white-0,$fs-0,$fw-normal,$line-height-0);
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+// Ipad
+@include responsive('medium'){
+    .carousel__content{
+        top: 20% !important;
+        left: 3% !important;
+        max-width: 350px;
+    }
+    .how-udemy-works{
+        .how-udemy-work-container{
+            width: 99% !important;
+            .how-udemy-work{
+                span{
+                    display: none;
+                }
+                .how-udemy-work__content{
+                    .how-udemy-work__heading{
+                        @include styleText($color-white-0,$fs-0+2,$fw-bold-1,$line-height-0);
+                    }
+                    .how-udemy-work__text{
+                        @include styleText($color-white-0,$fs-0,$fw-normal,$line-height-0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Iphone 6/7/8 plus
+@include responsive('small'){
+    .how-udemy-works{
+        display: none;
+    }
+}

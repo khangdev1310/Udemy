@@ -1,0 +1,45 @@
+.ude-teaching{
+    background-color: $color-gray-5;
+    .ude-teaching-container{
+        width: 78%;
+        margin: 0 auto;
+        padding: $pd-2;
+        .ude-teaching__left , .ude-teaching__right{
+            text-align: center;
+            padding: $pd-2 + 8;
+            .container{
+                a{
+                    @include styleText($color-black-light,$fs-2,$fw-bold-1,$line-height-0);
+                    text-decoration: none;
+                }
+                p{
+                    @include styleText($color-black-0,$fs-0 + 1,$fw-normal,$line-height-0);
+                    margin-top: $mg-1;
+                }
+                button{
+                    border: none;
+                    @include styleText($color-white-0,$fs-0,$fw-bold-1,$line-height-0);
+                }
+            }
+        }
+        .ude-teaching__left{
+            border-right: 1px solid $color-gray-6;
+        }
+    }
+}
+
+@include responsive("small"){
+    .ude-teaching{
+        .ude-teaching__left , .ude-teaching__right{
+            a{
+                font-size: $fs-1 !important;
+            }
+            p{
+                font-size: $fs-1 - 2 !important;
+            }
+            button{
+                font-size: $fs-0 - 5 !important;
+            }
+        }
+    }
+}
