@@ -484,6 +484,10 @@ header .navbar .bar-search button {
   line-height: 1.43;
 }
 
+.courses .courses__detail .tab-content .carousel-inner {
+  margin-left: 25px;
+}
+
 .courses .courses__detail .tab-content .carousel-control-prev, .courses .courses__detail .tab-content .carousel-control-next {
   width: 5%;
 }
@@ -495,7 +499,7 @@ header .navbar .bar-search button {
   background-color: #007791;
   position: absolute;
   top: 40%;
-  left: -20px;
+  left: -12px;
 }
 
 .courses .courses__detail .tab-content .carousel-control-prev .carousel-control-prev-icon:hover, .courses .courses__detail .tab-content .carousel-control-next .carousel-control-prev-icon:hover {

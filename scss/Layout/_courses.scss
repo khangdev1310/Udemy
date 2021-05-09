@@ -100,6 +100,9 @@
                     }
                 }
             }
+            .carousel-inner{
+                margin-left: 25px;
+            }
             .carousel-control-prev , .carousel-control-next{
                 width: 5%;
                 .carousel-control-prev-icon{
@@ -109,7 +112,7 @@
                     background-color: $color-blue;
                     position: absolute;
                     top: 40%;
-                    left: -20px;
+                    left: -12px;
                     &:hover{
                         box-shadow: 2px 2px 2px 2px $color-gray-1;
                     }
